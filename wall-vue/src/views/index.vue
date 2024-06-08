@@ -6,7 +6,7 @@
             </div>
             <div class="github-link">
                 <a-tooltip title="前往 Github" color="#1890ff" placement="bottom">
-                    <a href="https://github.com/super-tongyao/wall" target="_blank">
+                    <a href="https://github.com/zhang-tong-yao/wall" target="_blank">
                         <github-outlined/>
                         GitHub</a>
                 </a-tooltip>

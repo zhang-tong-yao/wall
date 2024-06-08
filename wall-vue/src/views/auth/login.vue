@@ -39,7 +39,7 @@
         </div>
         　　
         <div id="footer">
-            <p><a href="https://github.com/super-tongyao/wall/issues" target="_blank">提交Bug问题及建议</a> </p>
+            <p><a href="https://github.com/zhang-tong-yao/wall/issues" target="_blank">提交Bug问题及建议</a> </p>
         </div>
 
     </div>

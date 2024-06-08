@@ -54,7 +54,7 @@ if (/android|iphone|webos|ipod|blackberry/.test(deviceName)) {
 
 if (window.console && window.console.log) {
     const e = (...e) => setTimeout(console.log.bind(console, ...e));
-    e("\n %c Wall %c https://github.com/super-tongyao/wall \n", "color:#FFFFFB;background:#ffa628;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "background: #efefef;padding:5px 0 5px;border-radius:0 .5rem .5rem 0;")
+    e("\n %c Wall %c https://github.com/zhang-tong-yao/wall \n", "color:#FFFFFB;background:#ffa628;padding:5px 0;border-radius:.5rem 0 0 .5rem;", "background: #efefef;padding:5px 0 5px;border-radius:0 .5rem .5rem 0;")
     e(`  当前程序使用Wall搭建，作者：https://ityao.cn`);
     e(`\n\n\n\n\n`);
 }

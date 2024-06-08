@@ -5,5 +5,5 @@ ____    __    ____  ___       __       __
    \    /\    / /  _____  \  |  `----.|  `----.
     \__/  \__/ /__/     \__\ |_______||_______| v${project-info.version}
 
-GitHub开源地址: https://github.com/super-tongyao/wall
+GitHub开源地址: https://github.com/zhang-tong-yao/wall
 
