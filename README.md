@@ -42,13 +42,13 @@ Wall还有很多不足之处，比如部分移动端机型兼容等相关问题�
 
 | 名称          | Github                            |
 | ------------- | --------------------------------- |
-| Tongyao       | https://github.com/super-tongyao  |
+| Tongyao       | https://github.com/zhang-tong-yao  |
 | Wang Tuanjie  | https://github.com/KingBoyAndGirl |
 | 期待你的入... | 期待你的入...                     |
 
 ## 安装教程
 
-1、下载地址：[https://github.com/super-tongyao/wall/releases](https://github.com/super-tongyao/wall/releases)，以最新版为准。
+1、下载地址：[https://github.com/zhang-tong-yao/wall/releases](https://github.com/zhang-tong-yao/wall/releases)，以最新版为准。
 
 2、解压缩包，里面有两个文件夹，两个执行脚本，一个SQL脚本。
 
