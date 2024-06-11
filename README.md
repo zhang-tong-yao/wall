@@ -98,9 +98,9 @@ nohup ./startup.sh r> /dev/null 2> /dev/null &
 
 4、浏览器访问Wall程序。
 
-浏览器输入：```http://localhost:80```，正常显示页面及操作数据，至此完成安装。
+浏览器输入：```http://localhost:9999```，正常显示页面及操作数据，至此完成安装。
 
-后台管理：```http://localhost:80/login```，默认账号密码：admin/123456，如有问题，请提交Issues。
+后台管理：```http://localhost:9999/login```，默认账号密码：admin/123456，如有问题，请提交Issues。
 
 ### 拓展配置（可选）
 
