@@ -18,65 +18,56 @@ Wall是一款快速分享资源应用程序。俗称“照片墙、视频墙”�
 
 ## 演示截图
 
-![](https://img-blog.csdnimg.cn/d90a3605852049e59e6129b6ea356d21.png)
+![](https://img-blog.csdnimg.cn/direct/fee810eb3e7846ec8c2c6207b49093a5.png)
 
-![](https://img-blog.csdnimg.cn/b09c6dd1af074f77ba17575a32a49f6e.png)
+![](https://img-blog.csdnimg.cn/direct/c6052ec320574658acc48a00ecde801d.png)
 
-![](https://img-blog.csdnimg.cn/42a33e6001104fda84fd2a66955cad90.png)
+![](https://img-blog.csdnimg.cn/direct/bd2c6d923a3c4c969307f065cb0b3586.png)
 
-![](https://img-blog.csdnimg.cn/f170a54d25f54aeaacf75aa62177f207.png)
+![](https://img-blog.csdnimg.cn/direct/4204cbd46fcf44ddac8d819f1ddc8ec7.png)
 
-![](https://img-blog.csdnimg.cn/da2f0ec64c97424cae4e4c57e71d4488.png)
+![](https://img-blog.csdnimg.cn/direct/49aece6f2d164e478a3e781a49aa67c1.png)
 
-![](https://img-blog.csdnimg.cn/f8e02fe368c04000b82f875af872681b.jpeg)
+![](https://img-blog.csdnimg.cn/direct/27c1c385cf234486aacf1f3995d8e81e.png)
+
+![](https://img-blog.csdnimg.cn/direct/fe36ea360735450bacb0f9728c19a2a2.jpeg)
 
 ## 开发者名单
 
-Wall还有很多不足之处，比如部分移动端机型兼容等相关问题。
+Wall还有很多不足之处，比如部分移动端机型兼容等相关问题，或许你可以加入Wall团队，我们一起贡献代码。[申请加入](#共同协作)
 
-或许你可以加入Wall团队，我们一起贡献代码。[申请加入](#共同协作)
+下面表格中出现你的名称及主页地址，视为Wall团队成员。
 
-
-
-下面表格中出现你的头像及GitHub账号地址，视为Wall团队成员。
-
-| 名称          | Github                            |
-| ------------- | --------------------------------- |
-| Tongyao       | https://github.com/zhang-tong-yao  |
-| 期待你的入... | 期待你的入...                     |
+| 名称          | Github                           |
+| ------------- | -------------------------------- |
+| Tongyao       | https://github.com/zhang-tong-yao |
+| 期待你的入... | 期待你的入...                    |
 
 ## 安装教程
 
 1、下载地址：[https://github.com/zhang-tong-yao/wall/releases](https://github.com/zhang-tong-yao/wall/releases)，以最新版为准。
 
-2、解压缩包，里面有两个文件夹，两个执行脚本，一个SQL脚本。
+2、解压缩包，如下图展示文件目录内容。
 
-![](https://img-blog.csdnimg.cn/d41c213041d543ddacdc3b71f7a3a3ec.png)
+![](https://img-blog.csdnimg.cn/direct/f158faad18c34107aafb6e1c69a0e040.png)
 
-- wall：编译好的前端页面。
-- wall-service：编译好的后端jar程序包。
-- wall.sql：后端数据库。
 - startup.bat：Wall启动脚本。
-- stop.bat：Wall停止脚本。
-
-3、如果你是开发者（程序员），如只需要前端编译程序页面和后端服务jar包，那么只从如下路径中抽取文件，到你的服务器手动命令启动Wall服务。
-
-- Wall前端页面编译文件：wall/html/wall
-
-- Wall后端服务Jar包：wall-service/jar/wall.jar
+- wall-3.0.0.sql：后端数据库。
 
 ### 程序安装
 
+注：3.0.0版本以上为收费版本，目前免费永久使用授权许可。[2.0.0（3.0.0的旧版）以下为免费开源版本，点我跳转2.0.0安装文档。](/2.0.0.md)
 
-自2.0.0版本以上起，所有Wall程序采用一键启动，内置Nginx、JDK，无需再配置Nginx等相关文件操作。
+
+注：自3.0.0版本以上起，只需导入数据库SQL，在Wall目录下执行start脚本均可一键启动，无需其他操作。
 
 1、导入```Wall.sql```文件到MySQL数据库，`注：MySQL为5.7版本`。
 
 ```
-mysql> source wall.sql
+mysql> source wall-3.0.0.sql
 ```
 
-2、修改wall-service/config/application.yml配置文件，并修改你本地的MySQL数据库连接端口及账号密码。
+2、修改config/application.yml配置文件，并修改你本地的MySQL数据库连接端口及账号密码。
 
 ```
 # project prot
@@ -113,31 +104,11 @@ nohup ./startup.sh r> /dev/null 2> /dev/null &
 
 ### 拓展配置（可选）
 
-主要简化Wall安装程序后的一些基本配置，如暂不需要，无需配置，其他更多配置，请参考[Nginx官网](http://nginx.org/en/docs/)文档。
+主要简化Wall安装程序后的一些基本配置，如暂不需要，无需配置。
 
-1、前端页面端口修改
+1、修改后端服务端口
 
-默认端口为80，修改wall/config/nginx.conf配置文件。并修改你的前端端口，本文设置为8888。
-
-```
-server {
-	listen       8888;
-	server_name  localhost;
-	
-	underscores_in_headers on;
-
-	location / {
-		# 映射对应nginx/html下的wall前端程序
-		root html/wall;
-		try_files $uri $uri/ /index.html;
-	}
-	.......
-}
-```
-
-2、修改后端服务端口
-
-默认端口为9999，修改wall-service/config/application.yml配置文件。并修改你的后端端口，本文设置为8080。
+默认端口为9999，修改config/application.yml配置文件。并修改你的后端端口，本文设置为8080。
 
 ```
 # project prot
@@ -147,85 +118,9 @@ server:
 ......
 ```
 
-注意：如果你修改了后端服务端口，那么前端映射配置中，也需要修改映射后端服务端口，否则无法找到后端接口等问题。
+2、修改Wall上传文件大小限制
 
-修改wall/config/nginx.conf配置文件。找到映射后端服务的/api，改为对应8080端口后，重启Wall即可。
-
-```
-server {
-	listen       80;
-	server_name  localhost;
-	......
-	
-	# 后端服务地址
-	location /api{
-		rewrite  ^/api/(.*)$ /$1 break;
-		proxy_set_header Host $host;
-		proxy_set_header X-Real-IP $remote_addr;
-		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-		
-		# 转发Wall的后台服务地址
-		proxy_pass   http://localhost:8080;
-	}
-	......
-}
-```
-
-3、绑定域名
-
-首先云服务商解析域名到本服务器IP，修改wall/config/nginx.conf配置文件，改成你的域名。更多内容请查看[Nginx官网](http://nginx.org/en/docs/)。
-
-```
-server {
-	listen       80;
-	server_name  你的域名地址;
-	
-	underscores_in_headers on;
-
-	location / {
-		# 映射对应nginx/html下的wall前端程序
-		root html/wall;
-		try_files $uri $uri/ /index.html;
-	}
-	.......
-}
-```
-
-4、使用https
-
-确保你有可用的SSL证书，修改wall/config/nginx.conf配置文件，增加如下配置。更多内容请查看[SSL配置](http://nginx.org/en/docs/http/configuring_https_servers.html)。
-
-```
-server {
-	listen       80;
-	server_name  你的域名地址;
-	
-	ssl_certificate 你的SSL域名pem证书.pem;
-	ssl_certificate_key 你的SSL域名key证书.key;
-	
-	underscores_in_headers on;
-
-	location / {
-		# 映射对应nginx/html下的wall前端程序
-		root html/wall;
-		try_files $uri $uri/ /index.html;
-	}
-	.......
-}
-```
-
-5、修改Wall上传文件大小限制
-
-Wall默认上传大小为1024MB（1GB），修改wall/config/nginx.conf配置文件，暂改为2048（2GB）。
-
-```
-http {
-	......
-	
-	client_max_body_size 2048m;
-```
-
-修改wall-service/config/application.yml配置文件，暂改为2048（2GB）。
+修改config/application.yml配置文件，暂改为2048（2GB）。
 
 ```
 # spring config
@@ -240,6 +135,29 @@ spring:
 ```
 
 ## 更新日志
+#### 2024－06 - 11（v3.0.0）
+
+> 1. 全新首页瀑布流布局展示
+> 2. 全新资源UI展示界面
+> 3. 全新安装启动程序及脚本，实现一键安装
+> 4. 新增VR全景展示功能
+> 5. 新增系统欢迎初始页
+> 6. 新增对资源文件密码验证功能
+> 7. 新增批量上传资源功能
+> 8. 新增批量上传图床URL资源功能
+> 9. 新增自定义设置封面压缩比例
+> 10. 新增自定义设置首页布局展示
+> 11. 支持资源文件标题默认为空
+> 12. 优化上传封面识别算法功能
+> 13. 优化处理上传资源文件算法功能
+> 14. 优化修复首页加载慢效率问题
+> 15. 优化修复资源列表修改资源等字段问题
+> 16. 优化修复后台表单及自适应等问题
+> 17. 优化修复首页瀑布流展示及自适应等问题
+> 18. 优化修复删除资源文件本地资源不删除问题
+> 19. 重构资源查看器和图片、视频、VR全景一并轮播展示功能
+> 20. 支持以Linux为内核系统如：Cent OS、Ubuntu、Debian等系统
+
 #### 2023－04 - 03（v2.0.3）
 
 > 1. 修复后端默认配置文件信息
@@ -276,12 +194,14 @@ spring:
 参与共同协作会得到什么？
 
 - 你会出现在Wall开源人员贡献列表。
+- 扎实的应用技术。
+- 为求职简历加分。
 
 根据下列模板修改并回答问题：
 
 - 擅长技术：你熟悉和擅长的技术。
 
-- GitHub主页地址：你的GitHub主页地址（用于展示跳转你的主页）。
+- 主页地址：你的GitHub主页地址或其他主页地址（用于展示跳转你的主页）。
 
 - 如何理解开源？：你如何理解开源思想和想法。
 
@@ -290,11 +210,12 @@ spring:
 
 ## 技术讨论
 
-Wall微信讨论群欢迎扫码（如图损坏，手动添加微信号：Byte880），欢迎各位添加：
+Wall 技术问题交流群：
+
+| <img src="https://store.ityao.cn/api/image/friend/qrcode.png" alt="二维码加载失败，请手动添加微信号入群。"  style="zoom:100%;" /> | <span style="font-weight:200px">如二维码不展示，请手动添加微信号：Byte880（备注：wall交流群，否则不会通过）</span> |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 
-
-<img src="https://store.ityao.cn/api/image/friend/qrcode.png" alt="在这里插入图片描述" style="zoom:100%;" />
 
 ## 免责声明
 
