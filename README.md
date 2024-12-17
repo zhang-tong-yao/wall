@@ -208,11 +208,14 @@ spring:
 
 并发送至邮箱：super_tongyao@163.com，留意邮箱回信，让我们一起把Wall变的更好。
 
+## 相关问题
+相关问题及建议，请移步Issues：[https://github.com/zhang-tong-yao/wall/issues](https://github.com/zhang-tong-yao/wall/issues)
+
 ## 技术讨论
 
 Wall 技术问题交流群：
 
-| <img src="https://store.ityao.cn/api/image/friend/qrcode.png" alt="二维码加载失败，请手动添加微信号入群。"  style="zoom:100%;" /> | <span style="font-weight:200px">如二维码不展示，请手动添加微信号：Byte880（备注：wall交流群，否则不会通过）</span> |
+| <img src="https://store.ityao.cn/api/image/friend/qrcode.png" alt="二维码加载失败，请手动添加微信号入群。"  style="zoom:100%;" /> | <span style="font-weight:200px">如二维码不展示，请手动添加微信号：zhangtygz（备注：wall交流群，否则不会通过）</span> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 
